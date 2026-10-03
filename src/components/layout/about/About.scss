@@ -1,0 +1,174 @@
+.about-container {
+    margin-top: 2rem;
+}
+
+.about-main-content {
+    margin: 6rem auto;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+
+     @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        margin: 3rem 1.5rem;
+        padding: 2rem 1.5rem;
+        gap: 3rem;
+        .about-main-left {
+            .about-main-image {
+                height: 300px;
+            }
+        }
+        .about-main-right {
+            text-align: center !important;
+            .about-main-title {
+                font-size: 2rem;
+                &::after {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            .about-main-description {
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .about-main-left {
+        position: relative;
+
+        .about-main-image {
+            display: block;
+            width: 100%;
+            max-width: 620px;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 24px;
+            margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    .about-main-right {
+        max-width: 600px;
+        text-align: left;
+
+        .about-main-title {
+            position: relative;
+            display: inline-block;
+            font-size: var(--text-title-size);
+            font-weight: 700;
+            line-height: 1.2;
+            color: #111827;
+            margin: 0 0 1.5rem;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 55px;
+                height: 4px;
+                margin-top: 0.8rem;
+                background: #2563eb;
+                border-radius: 10px;
+            }
+        }
+
+        .about-main-description {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #6b7280;
+            margin: 0;
+        }
+    }
+}
+
+.about-team-list-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e7eb;
+    padding: 1rem;
+
+
+    .about-team-list-header {
+        margin-bottom: 2rem;
+
+        .about-team-list-title {
+            position: relative;
+            display: inline-block;
+            font-size: var(--text-title-size);
+            font-weight: bold;
+            margin-bottom: 1rem;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 55px;
+                height: 4px;
+                margin-top: 0.8rem;
+                background: #2563eb;
+                border-radius: 10px;
+            }
+        }
+
+        .about-team-list-description {
+            font-size: var(--text-desc-size);
+            color: var(--text-sub-color);
+            text-align: center;
+            max-width: 600px;
+        }
+    }
+
+    .about-team-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        gap: 5rem;
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .about-team-member {
+            text-align: center;
+
+            .about-team-member-image {
+                display: block;
+                margin: 0 auto;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center top;
+                background: radial-gradient(circle at 85% 45%, rgba(56, 103, 214, 0.16), transparent 35%), radial-gradient(circle at 15% 10%, rgba(99, 102, 241, 0.1), transparent 30%), linear-gradient(135deg, #f8faff 0%, #ffffff 50%, #f4f7ff 100%);
+            }
+
+            .about-team-member-name {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-top: 0.5rem;
+                letter-spacing: 3px;
+            }
+
+            .about-team-member-role {
+                font-size: var(--text-desc-size);
+                font-weight: 700;
+                color: #6b7280;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about-team-list {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
