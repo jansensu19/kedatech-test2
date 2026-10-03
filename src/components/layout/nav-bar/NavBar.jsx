@@ -1,4 +1,4 @@
-import './Navbar.scss';
+import './NavBar.scss';
 import { useState } from 'react';
 import Logo from '/src/assets/svg/logo.svg';
 import useSmoothScroll from '../../../hooks/useSmoothScroll';
